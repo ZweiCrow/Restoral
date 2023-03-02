@@ -1,0 +1,30 @@
+@import "reset.scss";
+@import "headerFooter.scss";
+@import "Arianne.scss";
+
+#ourChefs { height: fit-content; margin-bottom: 50px;
+    .conteneur  { height: 100%; margin: 0 auto; flex-direction: column;
+                  div { height: 200px; @include centerBloc;
+                        h2  { font-family: "KanitBold"; font-size: 35px; color: $noir;}
+                      }
+                  ul  { height: calc(85%/2); @include centerBloc; justify-content: space-around; flex-wrap: wrap;
+                        li  { width: 30%; height: 450px; @include centerBloc; flex-direction: column; justify-content: space-between; margin: 20px 0;
+                              img { height: 60%; width: 85%; background: $noir; border-radius: 50%; transition: .5s;
+                                    &:hover { transform: scale(1.1); box-shadow: 0 0 5px black; z-index: 2;}
+                                  }
+                              h3  { height: 7%; font-family: "KanitBold"; font-size: 22px; color: $jaune; line-height: 200%;}
+                              p   { height: 7%; font-family: "KanitLight"; font-size: 16px; color: $gris; line-height: 150%;}
+                              div { height: 20%; width: 100%;
+                                    ul  { width: 80%; height: 100%; @include centerBloc; justify-content: space-around;
+                                          li  { width: 20%; height: 50%; @include centerBloc;
+                                                a {  width: 85%; height: 110%; border-radius: 50%; border: 1px solid $jaune; @include centerBloc;
+                                                    img { width: 70%; height: 70%; background: none; filter: invert(20%) sepia(19%) saturate(3700%) hue-rotate(360deg) brightness(107%) contrast(104%);}
+                                                    &:hover { filter: drop-shadow(0 0 4px $jaune); }
+                                                  }
+                                              }
+                                        }
+                                  }
+                            }
+                      }
+                }
+  }

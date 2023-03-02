@@ -1,0 +1,43 @@
+@import "reset.scss";
+@import "headerFooter.scss";
+@import "Arianne.scss";
+
+.photos   { height: 100%; width: 100%; background: $rose;
+            img { width: 100%;}
+          }
+.presentation   {height: 100%; width: 45%;
+                  div  { height: 55%; display: flex; flex-direction: column; align-items: flex-start; margin-left: 70px; justify-content: center;
+                        h2  { font-family: "KanitBold"; color: $blanc; font-size: 45px;}
+                        p   { width: 90%; margin: 40px 0; font-family: "KanitLight"; color: $blanc; font-size: 18px;}
+                      }
+                }
+
+
+#Toasts   { width: 100%; height: 500px; clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+            .conteneur  { height: 100%; background: $jaune; margin: auto;
+                          .photos { position: relative; z-index: 0;}
+                          .presentation { position: absolute; z-index: 5; background: linear-gradient(to right, #36270e, #00000000);
+                                          div  { align-items: flex-start; }
+                                        }
+                        }
+}
+
+#Dishes   { width: 100%; height: 500px; clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+            .conteneur  { height: 100%; background: $jaune; margin: auto;
+                          .photos { position: relative; z-index: 0;}
+                          .presentation { position: absolute; z-index: 5; right: 15%; background: linear-gradient(to left, #36270e, #00000000);
+                                          div   { align-items: flex-end; text-align: end; margin-right: 70px;
+                                                  
+                                                }
+                                        }
+                        }
+}
+
+#Desserts   { width: 100%; height: 500px; clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+              .conteneur  { height: 100%; background: $jaune; margin: auto;
+                            .photos { position: relative; z-index: 0;}
+                            .presentation { position: absolute; z-index: 5; background: linear-gradient(to right, #36270e, #00000000);
+                                            div  { align-items: flex-start;}
+                                          }
+                          }
+}

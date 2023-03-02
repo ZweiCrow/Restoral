@@ -1,0 +1,488 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: KanitBold;
+  src: url(../fonts/Kanit/Kanit-Bold.ttf);
+}
+@font-face {
+  font-family: Kanit;
+  src: url(../fonts/Kanit/Kanit-Regular.ttf);
+}
+@font-face {
+  font-family: KanitLight;
+  src: url(../fonts/Kanit/Kanit-Light.ttf);
+}
+.conteneur {
+  display: flex;
+  width: 70%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  border-left: 1px solid #979397;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cta {
+  width: fit-content;
+  font-family: "kanitBold";
+  color: #FFFFFF;
+  background: #EC5353;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.cta:hover {
+  background: #FFAE00;
+}
+
+.hollowCta {
+  width: fit-content;
+  font-family: "kanitBold";
+  color: #FFFFFF;
+  background: transparent;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #FFFFFF;
+}
+.hollowCta:hover {
+  background: #FFAE00;
+  border: 2px solid #FFAE00;
+}
+
+.cache {
+  display: none !important;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  font-family: "Kanit";
+  font-weight: bold;
+  font-size: 20px;
+  background: #FFFFFF;
+  z-index: 1;
+  overflow: visible;
+}
+
+#head {
+  height: 100px;
+  justify-content: space-between;
+}
+#head a {
+  transition: 0.5s;
+}
+#head a:hover {
+  filter: drop-shadow(0 0 6px #FFAE00);
+}
+#head #logo {
+  width: 20%;
+}
+#head #logo img {
+  width: 70%;
+}
+#head #menu {
+  width: 50%;
+  z-index: 10;
+}
+#head #menu .PAGES {
+  position: absolute;
+  z-index: 10;
+  background: #FFFFFF;
+  padding: 10px 5px;
+  border-radius: 5px;
+  translate: -15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#head #menu .PAGES li {
+  margin: 5px 0;
+}
+#head #menu ul {
+  justify-content: space-between;
+}
+#head #menu img {
+  width: 2px;
+  filter: invert(77%) sepia(7%) saturate(400%) hue-rotate(251deg) brightness(82%) contrast(87%);
+}
+#head #menu a {
+  color: #333333;
+  transition: 0.5s;
+  margin: 0 6px;
+}
+#head #menu a:hover {
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 6px #FFAE00);
+  cursor: pointer;
+}
+#head #menu a.active {
+  color: #FFAE00;
+}
+#head #numero {
+  width: 20%;
+}
+#head #numero img {
+  width: 15%;
+}
+
+footer {
+  height: 400px;
+  background: firebrick;
+  font-family: "KanitLight";
+  font-size: 16px;
+}
+footer #preFooter {
+  height: 80%;
+  background: #23201E;
+}
+footer #preFooter div {
+  height: 100%;
+}
+footer #preFooter ul {
+  width: 100%;
+  justify-content: space-between;
+}
+footer #preFooter ul li {
+  width: 33%;
+  height: 70%;
+  flex-direction: column;
+}
+footer #preFooter ul li div {
+  height: 50%;
+  width: 93%;
+}
+footer #preFooter ul li div a {
+  text-decoration: none;
+  color: #979397;
+}
+footer #preFooter ul li div a:hover {
+  color: #FFE9B9;
+  filter: drop-shadow(0 0 4px #FFAE00);
+}
+footer #preFooter ul li div img {
+  height: 25%;
+  margin: 5px 0;
+}
+footer #preFooter ul li div div {
+  justify-content: flex-start;
+  margin-top: -20px;
+}
+footer #preFooter ul li div div input {
+  border: none;
+  margin: 25px 5px;
+  border-radius: 50px;
+  padding: 10px;
+  width: 30%;
+  transition: 0.5s;
+  color: #FFAE00;
+}
+footer #preFooter ul li div div input:focus {
+  width: 50%;
+}
+footer #preFooter ul li div div button {
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  color: #FFFFFF;
+  background: #EC5353;
+  transition: 0.5s;
+}
+footer #preFooter ul li div div button:hover {
+  background: #FFAE00;
+}
+footer #preFooter ul li div div ul {
+  justify-content: flex-start;
+}
+footer #preFooter ul li div div ul li {
+  width: 50px;
+}
+footer #preFooter ul li div div ul li:hover {
+  filter: invert(0%) sepia(41%) saturate(2%) hue-rotate(147deg) brightness(111%) contrast(101%);
+}
+footer #preFooter ul li div p {
+  color: #979397;
+}
+footer #preFooter ul li div .clock {
+  height: 40%;
+  margin-right: 5px;
+}
+footer #preFooter ul li div .title {
+  font-size: 30px;
+  font-family: "KanitBold";
+}
+footer #preFooter ul li div .important {
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+footer #preFooter ul li div .midFoo {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+footer #preFooter ul li div span {
+  font-size: 18px;
+}
+footer .socials {
+  width: 35px;
+  margin: 0 5px;
+}
+footer #footer {
+  height: 20%;
+  background: #333333;
+}
+footer #footer div {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+footer #footer div p {
+  color: #979397;
+}
+footer #footer div a {
+  color: #979397;
+  text-decoration: underline;
+}
+footer #footer div a:hover {
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 4px #FFAE00);
+}
+footer #footer div img {
+  height: 35px;
+  filter: invert(0%) sepia(0%) saturate(660%) hue-rotate(239deg) brightness(120%) contrast(100%);
+}
+footer #footer div li {
+  margin: 0 5px;
+}
+footer #footer div li:hover {
+  filter: invert(0%) sepia(41%) saturate(2%) hue-rotate(147deg) brightness(111%) contrast(101%);
+}
+
+#Arianne {
+  height: 350px;
+  width: 100%;
+  background: #EC5353;
+}
+#Arianne #ariaUp {
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+}
+#Arianne #ariaUp h2 {
+  font-family: "KanitBold";
+  font-size: 65px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+#Arianne #ariaUp div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Arianne #ariaUp div .active {
+  color: #FFAE00;
+}
+#Arianne #ariaUp div a {
+  font-family: "KanitLight";
+  font-size: 18px;
+  color: #FFFFFF;
+}
+#Arianne #ariaUp div a:hover {
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 4px #FFAE00);
+}
+#Arianne #ariaUp div p {
+  font-family: "KanitLight";
+  font-size: 18px;
+  color: #FFFFFF;
+}
+#Arianne #ariaUp div img {
+  margin: 0 20px;
+}
+#Arianne #ariaDown {
+  height: 350px;
+  width: 100%;
+  background: #333333;
+  position: relative;
+  z-index: 0;
+}
+#Arianne #ariaDown img {
+  width: 100%;
+  height: 100%;
+}
+
+.photos {
+  height: 100%;
+  width: 100%;
+  background: #EC5353;
+}
+.photos img {
+  width: 100%;
+}
+
+.presentation {
+  height: 100%;
+  width: 45%;
+}
+.presentation div {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 70px;
+  justify-content: center;
+}
+.presentation div h2 {
+  font-family: "KanitBold";
+  color: #FFFFFF;
+  font-size: 45px;
+}
+.presentation div p {
+  width: 90%;
+  margin: 40px 0;
+  font-family: "KanitLight";
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+#Toasts {
+  width: 100%;
+  height: 500px;
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+#Toasts .conteneur {
+  height: 100%;
+  background: #FFAE00;
+  margin: auto;
+}
+#Toasts .conteneur .photos {
+  position: relative;
+  z-index: 0;
+}
+#Toasts .conteneur .presentation {
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(to right, #36270e, rgba(0, 0, 0, 0));
+}
+#Toasts .conteneur .presentation div {
+  align-items: flex-start;
+}
+
+#Dishes {
+  width: 100%;
+  height: 500px;
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+#Dishes .conteneur {
+  height: 100%;
+  background: #FFAE00;
+  margin: auto;
+}
+#Dishes .conteneur .photos {
+  position: relative;
+  z-index: 0;
+}
+#Dishes .conteneur .presentation {
+  position: absolute;
+  z-index: 5;
+  right: 15%;
+  background: linear-gradient(to left, #36270e, rgba(0, 0, 0, 0));
+}
+#Dishes .conteneur .presentation div {
+  align-items: flex-end;
+  text-align: end;
+  margin-right: 70px;
+}
+
+#Desserts {
+  width: 100%;
+  height: 500px;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+#Desserts .conteneur {
+  height: 100%;
+  background: #FFAE00;
+  margin: auto;
+}
+#Desserts .conteneur .photos {
+  position: relative;
+  z-index: 0;
+}
+#Desserts .conteneur .presentation {
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(to right, #36270e, rgba(0, 0, 0, 0));
+}
+#Desserts .conteneur .presentation div {
+  align-items: flex-start;
+}
+
+/*# sourceMappingURL=Carte.css.map */

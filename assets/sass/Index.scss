@@ -1,0 +1,156 @@
+@import "reset.scss";
+@import "headerFooter.scss";
+
+body                { h1{display: none;} }
+sub, sup            { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup                 { top: -0.5em; }
+sub                 { bottom: 1em; font-size: 15px; }
+
+.cta  { width: fit-content; font-family: "kanitBold"; color: $blanc; background: $rose; padding: 10px 30px; border-radius: 50px; transition: .5s;
+        &:hover { background: $jaune;}
+      }
+
+#carousel { height: 740px; color: $gris; flex-direction: column;
+            #frontSlider  { position: absolute; z-index: 5;
+                            h2  { font-family: "Kanit"; font-size: 20px; margin: 0 5px;}
+                            img { width: 50px; filter: invert(0%) sepia(9%) saturate(157%) hue-rotate(251deg) brightness(90%) contrast(86%);}
+                            #droite { transform: rotate(180deg);}
+                          }   
+            #slider { height: 740px; width: 100%; position: relative; z-index: 0; overflow: hidden; 
+                      img { width: 100%; height: 100%;}
+                    }
+          }
+
+#aboutRestoral  { height: 650px; background: $grisClair; clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 50% 100%, 0 85%);
+                  div { height: 100%;
+                        .gauche { margin-left: 20px; margin-top: 100px;}
+                        div     { width: 50%;
+                                  img { width: 100%; height: 100%;}
+                                  h2  { font-family: "KanitBold"; font-size: 35px; margin: 25px 0; color: $noir;}
+                                  p   { font-family: "KanitLight"; font-size: 20px; margin: 15px 0; color: $gris;}
+                                  ul  { justify-content: space-around; margin-bottom: 70px;
+                                        li  { width: 30%; display: flex; flex-direction: column; align-items: center;
+                                              .aboutTitle { font-family: "Kanit"; font-size: 50px; color: $jaune; margin-bottom: -10px; }
+                                              p { font-family: "KanitBold"; font-size: 16px; }
+                                            }
+                                      }
+                                  a   { margin-left: 10px;}
+                                }
+                      }
+                }
+
+#valeurs  { height: 330px;
+            div { height: 100%;
+                  ul  { width: 100%; justify-content: space-around;
+                        li  { height: 90%; width: 20%; flex-direction: column; 
+                              .item       { height: 50%;}
+                              .itemTitle  { font-family: "KanitBold"; color: $noir; font-size: 20px; margin-top: 0px; margin-bottom: 20px; }
+                              .divide     { width: 20%; margin-bottom: 20px;}
+                              p           { font-family: "KanitLight"; color: $gris; text-align: center;}
+                            }
+                      }
+                }
+          }
+
+#carte  { height: 650px; 
+          div { height: 80%;
+                div { width: 100%; height: 100%; background: url(../images/carteBack.svg) no-repeat; background-size: 100% 100%; overflow: hidden;
+                      ul  { width: 90%; height: 70%; flex-wrap: wrap; justify-content: space-between;
+                            li  { height: 25%; width: 45%; display: flex; flex-direction: column; justify-content: center;
+                                  p { font-family: "KanitBold"; margin: 5px; color: $blanc; font-size: 18px;}
+                                  .under  {font-family: "KanitLight"; color: $gris; font-size: 14px;}
+                                }
+                          }
+                    }
+              }
+        }
+
+
+
+#orderOnline  { height: 570px; background: url(../images/photos/pizzas.jpg) no-repeat; background-size: 100%; background-position: center;  
+                .conteneur  { height: 100%; @include centerBloc; flex-direction: column;  width: 100%; background: rgba(47, 32, 9, 0.697);
+                              #orderFront { 
+                                            h2  { font-family: "Kanit"; font-size: 20px; margin: 0 5px; color: $blanc;}
+                                            img { width: 50px; filter: invert(24%) sepia(58%) saturate(2103%) hue-rotate(360deg) brightness(102%) contrast(104%);}
+                                            #droite { transform: rotate(180deg);}
+                                          }
+                              p           { font-family: "Kanit"; font-size: 40px; color: $blanc;}
+                              div         { margin: 10px 0;
+                                            p {font-family: "Kanit"; font-size: 40px; color: $jaune;}
+                                            ul  {
+                                                  li  { font-family: "Kanit"; color: $blanc; font-size: 10px;}
+                                                }
+                                          }
+                            }
+              }
+
+#ourChefs { height: 650px;
+            .conteneur  { height: 100%; margin: 0 auto; flex-direction: column;
+                          div { height: 15%; @include centerBloc;
+                                h2  { font-family: "KanitBold"; font-size: 35px; color: $noir;}
+                              }
+                          ul  { height: 85%; @include centerBloc; justify-content: space-around;
+                                li  { width: 30%; height: 80%; @include centerBloc; flex-direction: column; justify-content: space-between;
+                                      img { height: 60%; width: 85%; background: $noir; border-radius: 50%; transition: .5s;
+                                            &:hover { transform: scale(1.1); box-shadow: 0 0 5px black; z-index: 2;}
+                                          }
+                                      h3  { height: 7%; font-family: "KanitBold"; font-size: 22px; color: $jaune; line-height: 200%;}
+                                      p   { height: 7%; font-family: "KanitLight"; font-size: 16px; color: $gris; line-height: 150%;}
+                                      div { height: 20%; width: 100%;
+                                            ul  { width: 80%; height: 100%; @include centerBloc; justify-content: space-around;
+                                                  li  { width: 20%; height: 50%; @include centerBloc;
+                                                        a {  width: 85%; height: 110%; border-radius: 50%; border: 1px solid $jaune; @include centerBloc;
+                                                            img { width: 70%; height: 70%; background: none; filter: invert(20%) sepia(19%) saturate(3700%) hue-rotate(360deg) brightness(107%) contrast(104%);}
+                                                            &:hover { filter: drop-shadow(0 0 4px $jaune); }
+                                                          }
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        }
+          }
+
+#ourPartners  { height: 400px;
+                .conteneur  { height: 100%; margin: auto; @include centerBloc; flex-direction: column; justify-content: space-around;
+                              h2  { height: 15%;font-family: "KanitBold"; font-size: 35px; color: $noir; line-height: 150%;}
+                              p   { height: 15%;font-family: "KanitLight"; font-size: 18px; color: $gris; text-align: center;}
+                              div { height: 55%; width: 100%;
+                                    ul  { height: 100%; @include centerBloc; justify-content: space-around;
+                                          li  { width: 20%; height: 80%;
+                                                img { width: 100%; height: 100%; }
+                                              }
+                                        }
+                                  }
+                            }
+              }
+
+#gallery  { height: 300px;
+            ul  { width: 100%; height: 100%; @include centerBloc;
+                  li  { height: 100%; width: 25%; transition: .5s; 
+                        img { height: 100%; width: 100%;}
+                        &:hover { transform: scale(1.2); box-shadow: 0 0 5px black; z-index: 2;}
+                        
+                      }
+                }
+          }
+
+#ourTestimonials  { height: 650px;
+                    div { height: 100%; margin: auto; flex-direction: column;
+                          h2  { height: 10%; font-family: "KanitBold"; font-size: 35px; color: $noir; line-height: 200%; text-align: center;}
+                          ul  { height: 90%; width: 100%; @include centerBloc; justify-content: space-around;
+                                li  { height: 90%; width: 30%;
+                                      .photo  { height: 45%; @include centerBloc; background: url(../images/tilesDivider.svg)no-repeat; background-size: 100%; background-position: 0 55%;
+                                                img { height: 65%; width: 50%; border-radius: 50%; border: 10px solid $blanc; transition: .5s;
+                                                      &:hover { transform: scale(1.3); z-index: 2;}
+                                                    }
+                                              }
+                                      .titleTestimonial { height: 10%; font-family: "KanitBold"; font-size: 18px; color: $noir; text-align: center; line-height: 200%;}
+                                      .content  { height: 20%; font-family: "KanitLight"; font-size: 18px; color: $gris; text-align: center; line-height: 130%;}
+                                      .divide { height: 15%; background: url(../images/tilesDivider.svg)no-repeat; background-size: 100%; background-position: 0 60%;}
+                                      .name { height: 10%;  font-family: "KanitBold"; font-size: 14px; color: $gris; text-align: center;}
+                                    }
+                              }
+                        }
+                  }
+

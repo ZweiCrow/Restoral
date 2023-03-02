@@ -1,0 +1,94 @@
+@import "variables.scss";
+
+
+@font-face { font-family: KanitBold; src: url(../fonts/Kanit/Kanit-Bold.ttf); }
+@font-face { font-family: Kanit; src: url(../fonts/Kanit/Kanit-Regular.ttf); }
+@font-face { font-family: KanitLight; src: url(../fonts/Kanit/Kanit-Light.ttf); }
+
+.conteneur  { display: flex; width: 70%; }
+.flex       { display: flex; align-items: center; justify-content: center; }
+.divider    { border-left: 1px solid $gris; }
+a           { text-decoration: none; }
+.cta        { width: fit-content; font-family: "kanitBold"; color: $blanc; background: $rose; padding: 10px 30px; border-radius: 50px; transition: .5s;
+              &:hover { background: $jaune;}
+            }
+.hollowCta  { width: fit-content; font-family: "kanitBold"; color: $blanc; background: transparent; padding: 10px 30px; border-radius: 50px; transition: .5s; border: 2px solid $blanc;
+              &:hover { background: $jaune; border: 2px solid $jaune;}
+            }
+
+.cache      { display: none !important;}
+
+
+header  { display: flex; justify-content: center; font-family: "Kanit"; font-weight: bold; font-size: 20px; background: $blanc; z-index: 1; overflow: visible; }
+#head   { height: 100px; justify-content: space-between;
+          a       { transition: .5s;
+                    &:hover { filter: drop-shadow(0 0 6px $jaune); }
+                  }
+          #logo   { width: 20%; 
+                    img {width: 70%;}
+                  }
+          #menu   { width: 50%; z-index: 10;
+                    .PAGES  { position: absolute; z-index: 10; background: $blanc; padding: 10px 5px; border-radius: 5px; translate: -15%; @include centerBloc; flex-direction: column;
+                              li  { margin: 5px 0;}
+                            }
+                    ul  { justify-content: space-between;}
+                    img { width: 2px; filter: invert(77%) sepia(7%) saturate(400%) hue-rotate(251deg) brightness(82%) contrast(87%); }
+                    a   { color: $noir; transition: .5s; margin: 0 6px;
+                          &:hover   { color: $blanc; filter: drop-shadow(0 0 6px $jaune); cursor: pointer; }
+                          &.active  { color: $jaune; }
+                        }
+                  }
+          #numero { width: 20%;
+                    img { width: 15%; }
+                  }
+        }
+        
+
+footer  { height: 400px; background: firebrick; font-family: "KanitLight"; font-size: 16px;
+          #preFooter  { height: 80%; background: $marron; 
+                        div { height: 100%; }
+                        ul  { width: 100%; justify-content: space-between;
+                              li  { width: 33%; height: 70%; flex-direction: column;
+                                    div { height: 50%; width: 93%; 
+                                          a           { text-decoration: none; color: $gris;
+                                                        &:hover { color: $liens; filter: drop-shadow(0 0 4px $jaune);}
+                                                      }
+                                          img         { height: 25%; margin: 5px 0;}
+                                          div         { justify-content: flex-start; margin-top: -20px;
+                                                        input { border: none; margin: 25px 5px; border-radius: 50px; padding: 10px; width: 30%; transition: .5s; color: $jaune;
+                                                                &:focus { width: 50%;}
+                                                              } 
+                                                        button { border: none; border-radius: 50px; padding: 10px; color: $blanc; background: $rose; transition: .5s;
+                                                                 &:hover  { background: $jaune;}
+                                                               }
+                                                        ul  { justify-content: flex-start;
+                                                              li  { width: 50px; 
+                                                                    &:hover {filter: invert(0%) sepia(41%) saturate(2%) hue-rotate(147deg) brightness(111%) contrast(101%);}
+                                                                  }
+                                                            }
+                                                      }
+                                          p           { color: $gris; }
+                                          .clock      { height: 40%; margin-right: 5px;}
+                                          .title      { font-size: 30px; font-family: "KanitBold";}
+                                          .important  { color: $blanc; margin-bottom: 10px;}
+                                          .midFoo     { font-size: 20px; color: $blanc; margin-bottom: 20px;}
+                                          span        { font-size: 18px;}
+                                        }
+                                  }
+                            }
+                      }
+         .socials     { width: 35px; margin: 0 5px;}
+          #footer     { height: 20%; background: $noir; 
+                        div { height: 100%; align-items: center; justify-content: space-between; 
+                              p       { color: $gris; }
+                              a       { color: $gris; text-decoration: underline;
+                                        &:hover { color: $blanc; filter: drop-shadow(0 0 4px $jaune); }
+                                      }
+                              img     { height: 35px; filter: invert(0%) sepia(0%) saturate(660%) hue-rotate(239deg) brightness(120%) contrast(100%); }
+                              li      { margin: 0 5px; 
+                                        &:hover {filter: invert(0%) sepia(41%) saturate(2%) hue-rotate(147deg) brightness(111%) contrast(101%);}
+                                      }
+                            }
+                      }
+        }
+

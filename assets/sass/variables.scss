@@ -1,0 +1,11 @@
+$blanc: #FFFFFF;
+$noir: #333333;
+$gris: #979397;
+$grisClair: #ECEEED;
+$marron: #23201E;
+$rose: #EC5353;
+$jaune: #FFAE00;
+$liens: #FFE9B9;
+
+@mixin centerBloc { display: flex; justify-content: center; align-items: center;}
+
